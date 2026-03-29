@@ -19,13 +19,13 @@ const Hero = () => {
             <div className="flex justify-center lg:justify-start gap-4">
               <a
                 href="#project"
-                className="text-center  bg-emerald-800 text-white md:text-xs lg:text-sm font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors text-sm"
+                className="text-center  bg-emerald-800 text-white text-xs md:text-xs lg:text-sm font-semibold px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors text-sm"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="border border-gray-300 text-gray-700 font-semibold px-6 py-3 rounded-lg hover:border-emerald-700 hover:text-emerald-700 transition-colors text-sm"
+                className="border border-gray-300 text-gray-700 text-xs md:text-xs lg:text-sm  font-semibold px-6 py-3 rounded-lg hover:border-emerald-700 hover:text-emerald-700 transition-colors text-sm"
               >
                 Book a Meeting
               </a>
