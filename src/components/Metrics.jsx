@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Metrics = () => {
     const metrics = [
@@ -107,10 +108,12 @@ const Metrics = () => {
         return `${Math.floor(value)}+`;
     };
 
+    const [headingRef, headingVisible] = useScrollReveal();
+
     return (
         <section id="metrics" ref={sectionRef} className="w-full py-4">
             <div className="container mx-auto px-4 md:px-6 lg:px-0">
-                <h2 className="text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-12 text-center">
+                <h2 ref={headingRef} className={`reveal ${headingVisible ? 'visible' : ''} text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-12 text-center`}>
                     Metrics / Achievements
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">

@@ -1,3 +1,5 @@
+import { useScrollReveal, staggerDelay } from '../hooks/useScrollReveal';
+
 const caseStudies = [
   {
     title: "Project Akont Thammins",
@@ -20,22 +22,24 @@ const caseStudies = [
 ];
 
 export default function CaseStudy() {
+  const [headerRef, headerVisible] = useScrollReveal();
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.1 });
+
   return (
     <section id="casestudy" className="w-full bg-white py-4 md:py-6">
       <div className="container mx-auto px-4 md:px-6 lg:px-0">
-        <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-4 md:mb-8">Case Study / Work</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-          {caseStudies.map((c) => (
+        <h2 ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''} text-lg md:text-2xl font-bold text-gray-900 mb-4 md:mb-8 text-center`}>
+          Case Study / Work
+        </h2>
+        <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {caseStudies.map((c, index) => (
             <div
               key={c.title}
-              className="rounded-xl md:rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-gray-50"
+              className={`reveal ${gridVisible ? 'visible' : ''} rounded-xl md:rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 bg-gray-50`}
+              style={staggerDelay(index, 120)}
             >
               <div className="h-28 md:h-44 overflow-hidden">
-                <img
-                  src={c.img}
-                  alt={c.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
+                <img src={c.img} alt={c.title} width={600} height={400} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
               </div>
               <div className="p-3 md:p-5 flex flex-col gap-1 md:gap-2">
                 <h3 className="font-bold text-gray-900 text-xs md:text-sm">{c.title}</h3>
