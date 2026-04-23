@@ -3,9 +3,9 @@ import React, { useState, useEffect, useRef } from 'react';
 const Metrics = () => {
     const metrics = [
         { value: "800+", label: "Projects", target: 800, decimal: false },
-        { value: "$1M+", label: "Ad Spend Managed", target: 1000000, isCurrency: true, decimal: true },
+        { value: "$1.5M+", label: "Ad Spend Managed", target: 1500000, isCurrency: true, decimal: true },
         { value: "20+", label: "Startups Worked", target: 20, decimal: false },
-        { value: "10+", label: "Systems Built", target: 10, decimal: false },
+        { value: "12+", label: "Systems Built", target: 12, decimal: false },
     ];
 
     const [displayValues, setDisplayValues] = useState(metrics.map(() => 0));
@@ -108,23 +108,23 @@ const Metrics = () => {
     };
 
     return (
-        <section id="metrics" ref={sectionRef} className="w-full py-8 ">
-            <div className="container mx-auto px-6">
-                <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">
+        <section id="metrics" ref={sectionRef} className="w-full py-4">
+            <div className="container mx-auto px-4 md:px-6 lg:px-0">
+                <h2 className="text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-12 text-center">
                     Metrics / Achievements
                 </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
                     {metrics.map((metric, index) => (
                         <div
                             key={metric.label}
-                            className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-default "
+                            className="group bg-white rounded-xl md:rounded-2xl p-3 md:p-6 border border-gray-100 shadow-sm text-center transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-default "
                         >
-                            <p className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-2">
+                            <p className="text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-1 md:mb-2">
                                 {displayValues[index] > 0 
                                     ? formatValue(displayValues[index], metric)
                                     : metric.value}
                             </p>
-                            <p className="text-sm text-gray-500 font-medium tracking-wide">
+                            <p className="text-xs md:text-sm text-gray-500 font-medium tracking-wide">
                                 {metric.label}
                             </p>
             

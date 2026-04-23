@@ -28,22 +28,22 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="project" className="w-full py-8 md:py-16 ">
-      <div className="container mx-auto px-6">
+    <section id="project" className="w-full py-4 md:py-6 ">
+      <div className="container mx-auto px-4 md:px-6 lg:px-0">
 
         {/* Title — matches Metrics */}
-        <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-lg md:text-2xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-12 text-center">
           Products / Projects
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {projects.map((p) => (
             <div
               key={p.name}
-              className="group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-default flex flex-col"
+              className="group bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-default flex flex-col"
             >
               {/* Image */}
-              <div className="w-full h-48 overflow-hidden bg-gray-100">
+              <div className="w-full h-28 md:h-48 overflow-hidden bg-gray-100">
                 <img
                   src={p.image}
                   alt={p.name}
@@ -53,16 +53,16 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="font-bold text-gray-900 text-base mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+              <div className="p-3 md:p-6 flex flex-col flex-1">
+                <h3 className="font-bold text-gray-900 text-sm md:text-base mb-1 md:mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
                   {p.name}
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed flex-1">
+                <p className="text-xs md:text-sm text-gray-500 leading-relaxed flex-1 line-clamp-2">
                   {p.description}
                 </p>
 
                 {/* Hover underline — matches Metrics */}
-                <div className="mt-3 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-green-600 transition-all duration-300 group-hover:w-12" />
+                <div className="mt-3 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-purple-600 transition-all duration-300 group-hover:w-12" />
 
                 {/* <a href={p.link} className="mt-4 bg-emerald-800 text-white text-xs font-semibold px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors w-fit">
                   Learn more

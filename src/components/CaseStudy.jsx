@@ -21,26 +21,26 @@ const caseStudies = [
 
 export default function CaseStudy() {
   return (
-    <section id="casestudy" className="w-full bg-white py-4 md:py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">Case Study / Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section id="casestudy" className="w-full bg-white py-4 md:py-6">
+      <div className="container mx-auto px-4 md:px-6 lg:px-0">
+        <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-4 md:mb-8">Case Study / Work</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {caseStudies.map((c) => (
             <div
               key={c.title}
-              className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-gray-50"
+              className="rounded-xl md:rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow bg-gray-50"
             >
-              <div className="h-44 overflow-hidden">
+              <div className="h-28 md:h-44 overflow-hidden">
                 <img
                   src={c.img}
                   alt={c.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-5 flex flex-col gap-2">
-                <h3 className="font-bold text-gray-900 text-sm">{c.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">{c.description}</p>
-                <p className="text-emerald-700 font-bold text-sm mt-1">{c.result}</p>
+              <div className="p-3 md:p-5 flex flex-col gap-1 md:gap-2">
+                <h3 className="font-bold text-gray-900 text-xs md:text-sm">{c.title}</h3>
+                <p className="text-gray-500 text-[11px] md:text-xs leading-relaxed line-clamp-2">{c.description}</p>
+                <p className="text-violet-700 font-bold text-xs md:text-sm mt-0.5 md:mt-1">{c.result}</p>
               </div>
             </div>
           ))}
