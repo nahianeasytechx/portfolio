@@ -38,7 +38,7 @@ export default function About() {
             </span>
             <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-violet-100">
               <span className="w-1.5 h-1.5 bg-violet-500 rounded-full"></span>
-              AI Solutions
+              Business Solutions
             </span>
             <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-violet-100">
               <span className="w-1.5 h-1.5 bg-violet-500 rounded-full"></span>
