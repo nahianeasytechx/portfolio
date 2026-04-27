@@ -4,7 +4,7 @@ export default function About() {
   const [ref, isVisible] = useScrollReveal();
 
   return (
-    <section id="about" className="w-full py-8 md:py-16 lg:py-20">
+    <section id="about" className="w-full py-8 md:py-16 lg:py-20 bg-gradient-to-br from-white via-white to-violet-50">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
         <div
           ref={ref}
@@ -28,19 +28,19 @@ export default function About() {
 
           {/* Mini stat pills */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-violet-100">
+            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full">
               <span className="w-1.5 h-1.5 bg-violet-500 rounded-full"></span>
               ERP Systems
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-violet-100">
+            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full">
               <span className="w-1.5 h-1.5 bg-violet-500 rounded-full"></span>
               SaaS Products
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-violet-100">
+            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full">
               <span className="w-1.5 h-1.5 bg-violet-500 rounded-full"></span>
               Business Solutions
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-violet-100">
+            <span className="inline-flex items-center gap-1.5 bg-violet-50 text-violet-700 text-[10px] md:text-xs font-semibold px-3 md:px-4 py-1.5 md:py-2 rounded-full">
               <span className="w-1.5 h-1.5 bg-violet-500 rounded-full"></span>
               Digital Growth
             </span>

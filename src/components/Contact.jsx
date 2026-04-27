@@ -50,8 +50,16 @@ export default function Contact() {
 
           {/* Right Side — Contact Form */}
           <div ref={rightRef} className={`reveal-right ${rightVisible ? 'visible' : ''}`}>
-            <div className="bg-white rounded-2xl md:rounded-3xl p-5 md:p-10 mb-36 lg:mb-0 border border-gray-200 shadow-[0_8px_30px_rgba(0,0,0,0.08),0_2px_8px_rgba(0,0,0,0.06)]">
-              {sent ? (
+            <div className="group relative overflow-hidden bg-gradient-to-br from-white/80 via-white/80 to-violet-100/40 backdrop-blur-sm rounded-2xl md:rounded-3xl p-5 md:p-10 mb-36 lg:mb-0 border border-gray-200 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgb(139,92,246,0.12)] hover:-translate-y-1 transition-all duration-500">
+              
+              {/* Gradient Border Accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-violet-500 to-purple-500 transform origin-left scale-x-0 group-hover:scale-100 transition-transform duration-500"></div>
+              
+              {/* Subtle hover background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+              <div className="relative z-10">
+                {sent ? (
                 <div className="bg-violet-50 border border-violet-200 rounded-2xl px-8 py-14 text-center">
                   <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,6 +124,7 @@ export default function Contact() {
                   </button>
                 </form>
               )}
+              </div>
             </div>
           </div>
 

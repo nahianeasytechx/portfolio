@@ -57,11 +57,12 @@ const Ventures = () => {
           {ventures.map((venture, index) => (
             <div
               key={index}
-              className={`reveal ${gridVisible ? 'visible' : ''} group bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-default`}
+              className={`reveal ${gridVisible ? 'visible' : ''} group relative bg-gradient-to-br from-white via-white to-violet-50 rounded-xl md:rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:border-violet-200 hover:shadow-xl hover:shadow-violet-500/10 cursor-default`}
               style={staggerDelay(index, 120)}
             >
+              {/* Subtle hover background accent */}
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-violet-500/5 rounded-full blur-2xl group-hover:bg-violet-500/10 transition-colors duration-500 pointer-events-none"></div>
 
-              
               <div className="relative p-3 sm:p-6 md:p-8">
                 {/* Logo Container with Enhanced Styling */}
                 <div className="flex items-start justify-between mb-3 md:mb-6">

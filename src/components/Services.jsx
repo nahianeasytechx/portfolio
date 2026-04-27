@@ -61,10 +61,16 @@ export default function Services() {
           {services.map((s, index) => (
             <div
               key={s.title}
-              className={`reveal ${gridVisible ? 'visible' : ''} group rounded-xl md:rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 bg-gray-50`}
+              className={`reveal ${gridVisible ? 'visible' : ''} group relative rounded-xl md:rounded-2xl overflow-hidden bg-gradient-to-br from-white/80 via-white/80 to-violet-100/40 backdrop-blur-sm border border-gray-200 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(139,92,246,0.12)] hover:-translate-y-1 transition-all duration-500`}
               style={staggerDelay(index, 120)}
             >
-              <div className="relative p-3 sm:p-6 md:p-8">
+              {/* Gradient Border Accent */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-violet-500 to-purple-500 transform origin-left scale-x-0 group-hover:scale-100 transition-transform duration-500"></div>
+              
+              {/* Subtle hover background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+              
+              <div className="relative p-3 sm:p-6 md:p-8 z-10">
 
                 {/* Icon Container */}
                 <div className="flex items-start justify-between mb-3 md:mb-6">

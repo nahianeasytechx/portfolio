@@ -120,17 +120,19 @@ const Metrics = () => {
                     {metrics.map((metric, index) => (
                         <div
                             key={metric.label}
-                            className="group bg-white rounded-xl md:rounded-2xl p-3 md:p-6 border border-gray-100 shadow-sm text-center transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-default "
+                            className="group relative overflow-hidden bg-gradient-to-br from-white via-white to-violet-50 rounded-xl md:rounded-2xl p-3 md:p-6 border border-gray-100 shadow-sm text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-lg cursor-default"
                         >
-                            <p className="text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-1 md:mb-2">
-                                {displayValues[index] > 0 
-                                    ? formatValue(displayValues[index], metric)
-                                    : metric.value}
-                            </p>
-                            <p className="text-xs md:text-sm text-gray-500 font-medium tracking-wide">
-                                {metric.label}
-                            </p>
-            
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-violet-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            <div className="relative z-10">
+                                <p className="text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 group-hover:from-violet-600 group-hover:to-purple-600 bg-clip-text text-transparent mb-1 md:mb-2 transition-all duration-500">
+                                    {displayValues[index] > 0 
+                                        ? formatValue(displayValues[index], metric)
+                                        : metric.value}
+                                </p>
+                                <p className="text-xs md:text-sm text-gray-500 font-medium tracking-wide">
+                                    {metric.label}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>

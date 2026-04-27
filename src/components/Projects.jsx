@@ -44,32 +44,35 @@ export default function Projects() {
           {projects.map((p, index) => (
             <div
               key={p.name}
-              className={`reveal ${gridVisible ? 'visible' : ''} group bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-default flex flex-col`}
+              className={`reveal ${gridVisible ? 'visible' : ''} group relative bg-gradient-to-br from-white via-white to-violet-50 rounded-xl md:rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:border-violet-200 hover:shadow-xl hover:shadow-violet-500/10 cursor-pointer flex flex-col`}
               style={staggerDelay(index, 120)}
             >
+              {/* Subtle hover background accent */}
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-violet-500/5 rounded-full blur-2xl group-hover:bg-violet-500/10 transition-colors duration-500 pointer-events-none"></div>
+
               {/* Image */}
-              <div className="w-full h-28 md:h-48 overflow-hidden bg-gray-100">
+              <div className="w-full h-32 md:h-48 overflow-hidden bg-gray-100 relative z-10">
                 <img
                   src={p.image}
                   alt={p.name}
                   width={600}
                   height={400}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-3 md:p-6 flex flex-col flex-1">
-                <h3 className="font-bold text-gray-900 text-sm md:text-base mb-1 md:mb-2 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+              <div className="p-3 md:p-6 flex flex-col flex-1 relative z-10">
+                <h3 className="font-bold text-gray-900 text-sm md:text-lg mb-1 md:mb-2 group-hover:text-violet-600 transition-colors duration-300">
                   {p.name}
                 </h3>
-                <p className="text-xs md:text-sm text-gray-500 leading-relaxed flex-1 line-clamp-2">
+                <p className="text-xs md:text-sm text-gray-600 leading-relaxed flex-1 line-clamp-3">
                   {p.description}
                 </p>
 
                 {/* Hover underline */}
-                <div className="mt-3 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-purple-600 transition-all duration-300 group-hover:w-12" />
+                <div className="mt-3 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-purple-600 transition-all duration-500 group-hover:w-12" />
               </div>
             </div>
           ))}
