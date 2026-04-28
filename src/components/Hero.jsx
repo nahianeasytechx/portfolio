@@ -15,12 +15,6 @@ const Hero = () => {
         {/* Left Side — Text Content */}
         <div className="flex flex-col justify-center px-4 py-8 md:px-8 lg:px-12 xl:px-4">
           <div className="text-center md:text-start max-w-xl w-full mx-auto md:mx-0">
-            
-            {/* Tiny Badge */}
-            <div className="hero-title inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-100/50 border border-violet-200/50 text-violet-700 text-[10px] md:text-xs font-semibold uppercase tracking-wider mb-5 md:mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
-              ERP • SaaS • AI Systems
-            </div>
 
             <h1 className="hero-title text-[32px] md:text-5xl lg:text-[56px] font-extrabold text-gray-900 leading-[1.15] mb-5 md:mb-6">
               Build a Real Business <br className="hidden md:block" />
@@ -100,7 +94,7 @@ const Hero = () => {
 
           {/* Floating UI Element 1: 800+ Projects */}
           <div 
-            className="absolute top-4 md:top-20 right-4 md:-right-4 z-20 bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-2xl p-3 md:p-4 animate-float flex items-center gap-3 md:gap-4 transition-transform hover:scale-105" 
+            className="absolute -top-12 md:top-20 right-4 md:-right-4 z-20 bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-2xl p-3 md:p-4 animate-float flex items-center gap-3 md:gap-4 transition-transform hover:scale-105" 
             style={{ animationDelay: '1.5s', animationDuration: '6s' }}
           >
             <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-violet-100 to-purple-50 rounded-full flex items-center justify-center text-violet-600 shadow-inner">
